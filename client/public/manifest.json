@@ -1,0 +1,19 @@
+{
+  "short_name": "Electricity Record",
+  "name": "Electricity Record - Smart Meter Management",
+  "description": "Manage your electricity meter readings and bills with ease",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["utilities", "productivity"],
+  "lang": "en"
+} 

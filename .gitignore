@@ -1,0 +1,9 @@
+node_modules/
+client/node_modules/
+uploads/
+.env
+client/.env
+build/
+client/build/
+.DS_Store
+Thumbs.db 
