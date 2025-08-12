@@ -8,6 +8,8 @@ This guide will help you deploy your Electricity Record app on Render.
 2. **MongoDB Database**: You'll need a MongoDB database (MongoDB Atlas recommended)
 3. **GitHub Repository**: Your code should be pushed to GitHub
 
+> **Note**: Render now uses "Starter" plan instead of "Free" plan. The Starter plan is still free but with some limitations.
+
 ## 🗄️ Database Setup (MongoDB Atlas)
 
 1. **Create MongoDB Atlas Account**
@@ -60,7 +62,7 @@ This guide will help you deploy your Electricity Record app on Render.
      - **Environment**: `Node`
      - **Build Command**: `npm install`
      - **Start Command**: `npm start`
-     - **Plan**: Free
+     - **Plan**: Starter (Free tier)
 
 2. **Environment Variables**
    ```
@@ -81,7 +83,7 @@ This guide will help you deploy your Electricity Record app on Render.
      - **Name**: `electricity-record-frontend`
      - **Build Command**: `cd client && npm install && npm run build`
      - **Publish Directory**: `client/build`
-     - **Plan**: Free
+     - **Plan**: Starter (Free tier)
 
 2. **Environment Variables**
    ```
