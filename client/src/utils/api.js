@@ -3,7 +3,7 @@ import { getToken } from './auth';
 
 const api = axios.create({ 
   baseURL: process.env.NODE_ENV === 'production' 
-    ? '' 
+    ? process.env.REACT_APP_API_URL || 'https://electricity-record-api.onrender.com'
     : 'http://localhost:5000' 
 });
 

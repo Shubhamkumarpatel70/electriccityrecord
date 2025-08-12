@@ -11,7 +11,12 @@ const app = express();
 fs.mkdirSync(path.join(__dirname, 'uploads'), { recursive: true });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://electricity-record-frontend.onrender.com', 'https://electricity-record.onrender.com']
+    : 'http://localhost:3000',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -25,6 +30,11 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/electrici
 })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log('MongoDB Connection Error:', err));
+
+// Health check endpoint for Render
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'OK', message: 'Electricity Record API is running' });
+});
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
