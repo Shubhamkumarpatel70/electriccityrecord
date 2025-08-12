@@ -23,8 +23,11 @@ services:
   - type: static
     name: electricity-record-frontend
     plan: starter
-    buildCommand: cd client && npm install && npm run build
-    staticPublishPath: ./client/build
+    buildCommand: |
+      cd client
+      npm install
+      npm run build
+    staticPublishPath: client/build
     envVars:
       - key: REACT_APP_API_URL
         value: https://electricity-record-api.onrender.com
